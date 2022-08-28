@@ -61,5 +61,36 @@
 }
 
 .image {
-  display: inline-block;
+  width: 400px;
+  height: 400px;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all-comments {
+  border: none;
+}
+.comment-count {
+  height: 30px;
+  width: 30px;
+  background-color: #0284c7;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.count-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }

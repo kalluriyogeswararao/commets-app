@@ -32,12 +32,32 @@ class Comments extends Component {
       id: uuidv4(),
       name,
       comment,
+      isLike: false,
     }
     this.setState(prevState => ({
       commentList: [...prevState.commentList, addComment],
       name: '',
       comment: '',
     }))
+  }
+
+  toggleIsFavorite = id => {
+    this.setState(prevState => ({
+      commentList: prevState.commentList.map(each => {
+        if (id === each.id) {
+          return {...each, isLike: !each.isLike}
+        }
+        return each
+      }),
+    }))
+  }
+
+  deleteComment = id => {
+    const {commentList} = this.state
+    const getFilteredComments = commentList.filter(
+      eachComm => eachComm.id !== id,
+    )
+    this.setState({commentList: getFilteredComments})
   }
 
   render() {
@@ -92,6 +112,8 @@ class Comments extends Component {
               initialContainerBackgroundClassNames={
                 initialContainerBackgroundClassNames
               }
+              toggleIsFavorite={this.toggleIsFavorite}
+              deleteComment={this.deleteComment}
             />
           ))}
         </ul>

@@ -45,8 +45,8 @@
   font-size: 20px;
   color: #ffffff;
   background-color: #f59e0b;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -63,5 +63,30 @@
 .comment {
   font-size: 17px;
   color: #475569;
-  margin-left: 68px;
+  margin-left: 60px;
+}
+.like-button {
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  cursor: pointer;
+}
+.delete-button {
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  cursor: pointer;
+}
+.like-image {
+  height: 30px;
+}
+
+.delete-image {
+  width: 30px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
